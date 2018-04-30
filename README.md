@@ -2,15 +2,39 @@
 Notebooks for the UKM summer school
 
 ## Setup
-The easiest way to go is through `conda`. When working on Windows, it may be the only way.
+The easiest way to go is through `conda`. If you run on GNU/Linux you may opt for [installing through the native Python](#virtualenv) in your package manager.
 
-### Conda (TODO)
+### Conda
+Choose your Conda. Anaconda is a very big package, and it includes a webinterface for creating environments and installing packages. But Anaconda can be too much. We prefer working with [Miniconda](https://conda.io/miniconda.html), from the command-line.
+
+#### MiniConda & Command-line
+Make sure your prompt is at an appropriate directory for this project.
 
 ```bash
-$ conda install -c conda-forge cartopy
+$ pwd
+/home/joe/Documents/UKMS
+```
+Create a Conda environment, and activate it:
+
+```bash
+$ conda create ukms
+$ conda activate ukms
+(ukms) $
 ```
 
-### VirtualEnv
+Install Numpy, SciPy, Matplotlib, NetCDF4 and Jupyter
+
+```bash
+(ukms) $ conda install numpy scipy matplotlib netCDF4 jupyterlab
+```
+
+Cartopy can be installed from conda-forge:
+
+```bash
+(ukms) $ conda install -c conda-forge cartopy
+```
+
+### <a name="virtualenv"></a>VirtualEnv
 This supposes you are on a Debian flavoured distribution of GNU/Linux (Debian, Ubuntu or Mint), where you have root access (i.e. your laptop). Commands may vary slightly if you are on Fedora, SuSe or otherwise. If you run Windows it is recommended to follow the `conda` method of installation.
 
 ```bash
@@ -34,11 +58,6 @@ Create a Python virtual environment.
 
 ```bash
 $ virtualenv -p python3 ukms-venv
-Already using interpreter /usr/bin/python3
-Using base prefix '/usr'
-New python executable in /home/joe/Documents/UKMS/ukms-venv/bin/python3
-Also creating executable in /home/joe/Documents/UKMS/ukms-venv/bin/python
-Installing setuptools, pkg_resources, pip, wheel...done.
 ```
 
 Then, activate the virtual environment (the prompt will change) and go to the directory where you cloned this repository (use TAB-completion!)
