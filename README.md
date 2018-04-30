@@ -34,6 +34,12 @@ Cartopy can be installed from conda-forge:
 (ukms) $ conda install -c conda-forge cartopy
 ```
 
+Then run the notebooks using
+
+```bash
+(ukms) $ jupyter lab
+```
+
 ### <a name="virtualenv"></a>VirtualEnv
 This supposes you are on a Debian flavoured distribution of GNU/Linux (Debian, Ubuntu or Mint), where you have root access (i.e. your laptop). Commands may vary slightly if you are on Fedora, SuSe or otherwise. If you run Windows it is recommended to follow the `conda` method of installation.
 
@@ -44,7 +50,7 @@ $ sudo apt install python3 virtualenv python3-virtualenv python3-pip
 Cartopy is less commonly found in standard setups. It has some binary requirements. Again the easiest way to go is using `conda`; nevertheless, you'll need to install `libgeom` and `libproj` development libraries if you would like to run using native Python.
 
 ```bash
-$ sudo apt install libproj-dev libgeos-dev
+$ sudo apt install build-essential python3-dev libproj-dev libgeos-dev
 ```
 
 #### Setting up the VirtualEnv
