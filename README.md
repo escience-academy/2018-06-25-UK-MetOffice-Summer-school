@@ -88,6 +88,10 @@ You should be ready to go!
 (ukms-venv) $ jupyter lab
 ```
 
+## Contact
+
+If you have any questions before the workshop you can contact us at: training@esciencecenter.nl
+
 ## Files
 
 ### data
