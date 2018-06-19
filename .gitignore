@@ -1,0 +1,9 @@
+# emacs
+*~
+\#*\#
+.\#*
+
+# notebooks
+.ipynb_checkpoints
+*.slides.html
+__pycache__
